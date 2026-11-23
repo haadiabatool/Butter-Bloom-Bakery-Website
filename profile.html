@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile &amp; Bakery Dashboard — Butter Bloom</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+
+  <!-- Top Sticky Bakery Navbar -->
+  <header class="bk-navbar" id="bkNavbar">
+    <div class="bk-nav-container">
+      <a href="index.html" class="bk-brand" aria-label="Butter Bloom Bakery Home">
+        <span class="bk-brand-script">Butter Bloom</span>
+        <span class="bk-brand-sub">Artisan Patisserie</span>
+      </a>
+
+      <nav class="bk-nav-links" aria-label="Primary Navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#bestsellers">Bestsellers</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="bk-nav-actions">
+        <a
+          href="profile.html"
+          class="profile-circle-btn"
+          id="navProfileBtn"
+          aria-label="User Profile"
+          title="My Profile"
+        >
+          <img id="navProfileImg" class="profile-nav-avatar" alt="User avatar" hidden />
+          <svg id="navProfileIcon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="bk-profile-main">
+    <div class="bk-profile-container">
+
+      <!-- Top Profile Header Bar -->
+      <section class="bk-profile-topbar" aria-label="Bakery Account Overview">
+        <div
+          class="bk-identity-trigger"
+          id="profileDetailTrigger"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="profileDetailsCard"
+        >
+          <div class="bk-avatar-lg-wrap">
+            <img id="pageAvatarImg" src="" alt="Profile avatar" class="bk-avatar-lg" hidden />
+            <span id="pageAvatarFallback" class="bk-avatar-fallback">BB</span>
+          </div>
+          <div class="bk-identity-meta">
+            <span class="bk-status-pill" id="authStatusBadge">Guest Baker</span>
+            <h1 class="bk-page-title" id="displayUserName">Welcome, Guest</h1>
+            <p class="bk-page-sub" id="displayUserSub">Login to view your account info, track bakery orders, and manage saved treats.</p>
+          </div>
+        </div>
+
+        <div class="bk-topbar-actions">
+          <button type="button" class="btn-bk-primary" id="openAuthModalBtn">Edit Profile</button>
+          <button type="button" class="btn-bk-outline" id="topbarLogoutBtn" hidden>Logout</button>
+        </div>
+
+        <!-- Clicking Profile on profile.html reveals Email, Phone, Name & Logout -->
+        <div class="bk-details-popover" id="profileDetailsCard" hidden>
+          <div class="bk-popover-header">
+            <h2>Profile Details</h2>
+            <button type="button" class="bk-popover-close" id="closeDetailsCardBtn" aria-label="Close profile details">&times;</button>
+          </div>
+          <dl class="bk-popover-list">
+            <div>
+              <dt>Full Name</dt>
+              <dd id="detailName">—</dd>
+            </div>
+            <div>
+              <dt>Email Address</dt>
+              <dd id="detailEmail">—</dd>
+            </div>
+            <div>
+              <dt>Phone Number</dt>
+              <dd id="detailPhone">—</dd>
+            </div>
+          </dl>
+          <div class="bk-popover-actions">
+            <button type="button" class="btn-bk-ghost" id="editFromPopoverBtn">Edit Profile</button>
+            <button type="button" class="btn-bk-danger" id="popoverLogoutBtn">Logout</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Section -->
+      <section class="bk-section" id="dashboard" aria-labelledby="dashboardHeading">
+        <div class="bk-section-head">
+          <span class="bk-eyebrow">SWEET DASHBOARD</span>
+          <h2 class="bk-heading" id="dashboardHeading">Your Bakery Overview</h2>
+        </div>
+
+        <div class="bk-guest-card" id="guestDashboardNotice">
+          <p>
+            You are browsing as a guest. <strong>Login</strong> with your name, phone number, email address, and photo to see your personalized profile dashboard.
+          </p>
+          <button type="button" class="btn-bk-primary" id="noticeLoginBtn">Login Now</button>
+        </div>
+
+        <div class="bk-user-card" id="userDashboardCard" hidden>
+          <div class="bk-user-grid">
+            <div class="bk-summary-item">
+              <span class="bk-summary-label">Full Name</span>
+              <strong class="bk-summary-value" id="dashName">—</strong>
+            </div>
+            <div class="bk-summary-item">
+              <span class="bk-summary-label">Email Address</span>
+              <strong class="bk-summary-value" id="dashEmail">—</strong>
+            </div>
+            <div class="bk-summary-item">
+              <span class="bk-summary-label">Phone Number</span>
+              <strong class="bk-summary-value" id="dashPhone">—</strong>
+            </div>
+            <div class="bk-summary-item">
+              <span class="bk-summary-label">Membership</span>
+              <strong class="bk-summary-value bk-active-text">Active Member</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="bk-stats-grid">
+          <article class="bk-stat-card">
+            <span class="bk-stat-label">Total Orders</span>
+            <strong class="bk-stat-value" id="statOrdersCount">0</strong>
+            <span class="bk-stat-note">Live order tracking</span>
+          </article>
+          <article class="bk-stat-card">
+            <span class="bk-stat-label">Wishlist Treats</span>
+            <strong class="bk-stat-value" id="statWishlistCount">0</strong>
+            <span class="bk-stat-note">Saved via heart icon</span>
+          </article>
+          <article class="bk-stat-card">
+            <span class="bk-stat-label">Preparing / Out</span>
+            <strong class="bk-stat-value" id="statPreparingCount">0</strong>
+            <span class="bk-stat-note">Freshly baked orders</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Orders Tracking Section -->
+      <section class="bk-section" id="orders" aria-labelledby="ordersHeading">
+        <div class="bk-section-head">
+          <span class="bk-eyebrow">ORDER TRACKING</span>
+          <h2 class="bk-heading" id="ordersHeading">Your Bakery Orders</h2>
+        </div>
+
+        <div class="bk-orders-list" id="ordersList"></div>
+      </section>
+
+      <!-- Wishlist Section -->
+      <section class="bk-section" id="wishlist" aria-labelledby="wishlistHeading">
+        <div class="bk-section-head-flex">
+          <div>
+            <span class="bk-eyebrow">FAVORITE CATEGORIES &amp; TREATS</span>
+            <h2 class="bk-heading" id="wishlistHeading">My Wishlist</h2>
+          </div>
+          <p class="bk-subnote">Click the heart button on any category or bakery item to add or remove it here.</p>
+        </div>
+
+        <!-- Sample Category Heart Buttons (Synced with Categories & Items via [data-wishlist-btn]) -->
+        <div class="bk-category-hearts" aria-label="Bakery category heart buttons">
+          <span class="bk-hearts-label">Categories:</span>
+
+          <button
+            type="button"
+            class="bk-heart-btn"
+            data-wishlist-btn
+            data-id="cat-artisan-cakes"
+            data-title="Artisan Cakes"
+            data-category="Bakery Categories"
+            data-price="From $28"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Artisan Cakes</span>
+          </button>
+
+          <button
+            type="button"
+            class="bk-heart-btn"
+            data-wishlist-btn
+            data-id="cat-french-pastries"
+            data-title="French Pastries"
+            data-category="Bakery Categories"
+            data-price="From $6"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>French Pastries</span>
+          </button>
+
+          <button
+            type="button"
+            class="bk-heart-btn"
+            data-wishlist-btn
+            data-id="cat-fudge-brownies"
+            data-title="Fudge Brownies"
+            data-category="Bakery Categories"
+            data-price="From $14"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Fudge Brownies</span>
+          </button>
+        </div>
+
+        <div class="bk-wishlist-grid" id="wishlistGrid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Login & Authentication Modal -->
+  <div class="bk-modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle" hidden>
+    <div class="bk-modal-backdrop" id="authModalBackdrop"></div>
+    <div class="bk-modal-card">
+      <div class="bk-modal-header">
+        <div>
+          <span class="bk-eyebrow">MEMBER LOGIN</span>
+          <h2 id="authModalTitle">Sign In to Your Bakery Profile</h2>
+        </div>
+        <button type="button" class="bk-modal-close" id="closeAuthModalBtn" aria-label="Close login modal">&times;</button>
+      </div>
+
+      <form id="authLoginForm" class="bk-auth-form" novalidate>
+        <div class="bk-field">
+          <label for="authName">Full Name *</label>
+          <input type="text" id="authName" name="name" placeholder="Your full name" autocomplete="name" required />
+          <small class="bk-error" id="errName"></small>
+        </div>
+
+        <div class="bk-field">
+          <label for="authPhone">Phone Number *</label>
+          <input type="tel" id="authPhone" name="phone" placeholder="+92 300 1234567" autocomplete="tel" required />
+          <small class="bk-error" id="errPhone"></small>
+        </div>
+
+        <div class="bk-field">
+          <label for="authEmail">Email Address *</label>
+          <input type="email" id="authEmail" name="email" placeholder="you@example.com" autocomplete="email" required />
+          <small class="bk-error" id="errEmail"></small>
+        </div>
+
+        <div class="bk-field">
+          <label for="authImageFile">Profile Image (Upload or Image URL)</label>
+          <input type="file" id="authImageFile" accept="image/*" />
+          <input type="url" id="authImageUrl" placeholder="Or paste an image URL (https://...)" />
+          <small class="bk-error" id="errImage"></small>
+        </div>
+
+        <div class="bk-preview-box" id="authPreviewRow" hidden>
+          <img id="authPreviewImg" src="" alt="Selected profile preview" class="bk-preview-img" />
+          <span>Profile picture preview</span>
+        </div>
+
+        <button type="submit" class="btn-bk-primary bk-submit-full">Save &amp; Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

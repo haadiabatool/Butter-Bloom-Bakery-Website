@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butter Bloom | Artisan Bakery & Patisserie</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts: Playfair Display, Poppins, Great Vibes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <!-- Left: Unified Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <span class="brand-emblem" aria-hidden="true">
+          <!-- Minimalist Floral/Whisk Emblem -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3c2.5 3 2.5 6 0 9-2.5-3-2.5-6 0-9z"></path>
+            <path d="M12 21c-2.5-3-2.5-6 0-9 2.5 3 2.5 6 0 9z"></path>
+            <path d="M3 12c3-2.5 6-2.5 9 0-3 2.5-6 2.5-9 0z"></path>
+            <path d="M21 12c-3 2.5-6 2.5-9 0 3-2.5 6-2.5 9 0z"></path>
+          </svg>
+        </span>
+        <div class="brand-text-wrap">
+          <span class="brand-title">Butter Bloom</span>
+          <span class="brand-tagline">Artisan Bakery</span>
+        </div>
+      </a>
+
+      <!-- Middle: Navigation Links -->
+      <ul class="nav-links" id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#collection">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Right: Circular Profile Icon + Hamburger/Cross Toggle -->
+      <div class="nav-right">
+        <a href="profile.html" class="profile-circle-btn" aria-label="User Profile" title="My Profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation" aria-expanded="false">
+          <!-- Hamburger Icon -->
+          <svg class="icon-hamburger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+          <!-- Cross Icon -->
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+
+    <!-- Right-Side Cake Visual Merged via Feathered Brush Gradient -->
+    <div class="hero-painted-backdrop">
+      <img src="assets\cakes\cake-2.jpeg" alt="Handcrafted chocolate cake with silky frosting and berries">
+    </div>
+
+    <!-- Organic Painterly Brushstroke Accent Blending Text & Cake Canvas -->
+    <svg class="brush-stroke-overlay" viewBox="0 0 200 800" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M90,0 C130,110 40,210 105,330 C160,430 55,540 115,670 C145,735 95,780 110,800 L0,800 L0,0 Z"
+        fill="#FAF6F0" opacity="0.78" />
+      <path
+        d="M115,0 C155,130 65,240 125,360 C175,460 75,570 135,700 C155,745 120,785 130,800 L85,800 C65,700 135,580 85,460 C40,350 120,220 75,100 C60,60 80,20 90,0 Z"
+        fill="#F3E9DC" opacity="0.55" />
+    </svg>
+
+    <!-- Left-Side Text Content -->
+    <div class="hero-container">
+      <div class="hero-content">
+
+        <div class="hero-eyebrow-wrap">
+          <span class="hero-eyebrow">FRESHLY BAKED, ALWAYS MADE WITH LOVE</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Life Is <span>Sweeter</span> With Something Delicious.
+        </h1>
+
+        <p class="hero-description">
+          Discover handcrafted cakes, buttery pastries, and rich, fudgy brownies, freshly prepared to make your everyday
+          moments a little more special.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#collection" class="btn-primary">Explore Our Menu</a>
+          <a href="categories.html" class="btn-secondary">Order Now</a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Section 02: Explore Our Collection -->
+  <section class="collection-section" id="collection">
+    <div class="section-container">
+
+      <!-- Section Header -->
+      <div class="section-header">
+        <div class="section-eyebrow-wrap">
+          <span class="section-eyebrow">EXPLORE OUR COLLECTION</span>
+        </div>
+        <h2 class="section-heading">A Little Something for Every Craving.</h2>
+        <p class="section-description">
+          From celebration cakes to flaky pastries and irresistible brownies, find your favorite treat in our freshly
+          baked collection.
+        </p>
+      </div>
+
+      <!-- 3 Category Cards -->
+      <div class="collection-grid">
+
+        <!-- Card 1: Cakes -->
+        <article class="category-card">
+          <div class="card-image-wrap">
+            <img src="assets\cake.jpeg"
+              alt="Artisan Celebration Cakes" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cakes</h3>
+            <a href="categories.html?category=cakes" class="btn-discover" data-category="cakes">
+              Discover
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Brownies -->
+        <article class="category-card">
+          <div class="card-image-wrap">
+            <img src="assets\brownies\brownie-11.jpeg"
+              alt="Rich Fudgy Brownies" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Brownies</h3>
+            <a href="categories.html?category=brownies" class="btn-discover" data-category="brownies">
+              Discover
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Pastries -->
+        <article class="category-card">
+          <div class="card-image-wrap">
+            <img src="assets\pastries\pastry-2.jpeg"
+              alt="Flaky Buttery Pastries" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Pastries</h3>
+            <a href="categories.html?category=pastries" class="btn-discover" data-category="pastries">
+              Discover
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Customer Favorites -->
+  <section class="favorites-section" id="favorites">
+    <div class="section-container">
+
+      <!-- Section Header -->
+      <div class="section-header">
+        <div class="section-eyebrow-wrap">
+          <span class="section-eyebrow">CUSTOMER FAVORITES</span>
+        </div>
+        <h2 class="section-heading">The Treats Everyone Is Talking About.</h2>
+        <p class="section-description">
+          Some treats are simply too good to keep secret. Explore our most-loved cakes, pastries, and brownies, baked to
+          bring a smile to every bite.
+        </p>
+      </div>
+
+      <!-- 4 Favorite Treat Cards Grid -->
+      <div class="favorites-grid" id="favoritesGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- Section 04: About / Our Story -->
+  <section class="story-section" id="about">
+    <!-- Right-Side Story Image Merged via Feathered Brush Gradient -->
+    <div class="story-painted-backdrop">
+      <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1400&auto=format&fit=crop"
+        alt="Artisan baker preparing fresh pastries in a warm bakery kitchen" />
+    </div>
+
+    <!-- Organic Painterly Brushstroke Accent Blending Text & Story Canvas -->
+    <svg class="story-brush-overlay" viewBox="0 0 200 800" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M95,0 C140,120 45,230 110,350 C165,450 50,560 120,690 C145,745 100,785 115,800 L0,800 L0,0 Z"
+        fill="#FAF6F0" opacity="0.82" />
+      <path
+        d="M120,0 C160,140 70,250 130,380 C180,480 80,590 140,715 C160,760 125,790 135,800 L90,800 C70,710 140,595 88,470 C42,360 125,230 78,105 C62,62 85,22 95,0 Z"
+        fill="#F3E9DC" opacity="0.58" />
+    </svg>
+
+    <!-- Left-Side Story Content -->
+    <div class="story-container">
+      <div class="story-content">
+        <div class="section-eyebrow-wrap">
+          <span class="section-eyebrow">A STORY BAKED WITH LOVE</span>
+        </div>
+
+        <h2 class="story-heading">
+          More Than a Bakery, It's a Little Piece of <span>Happiness.</span>
+        </h2>
+
+        <p class="story-description">
+          Every great memory deserves something sweet. At Maison Sucrée, we believe in the magic of freshly baked
+          treats, quality ingredients, and the little details that make every bite memorable.
+        </p>
+
+        <div class="story-actions">
+          <a href="#story-details" class="btn-primary">Discover Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 06: Freshly Baked -->
+  <section class="freshly-baked-section" id="freshly-baked">
+    <div class="section-container">
+
+      <!-- Top Section Header -->
+      <div class="section-header">
+        <div class="section-eyebrow-wrap">
+          <span class="section-eyebrow">FRESH FROM OUR OVEN</span>
+        </div>
+        <h2 class="section-heading">
+          Freshly Baked. Beautifully Made. Always <span>Delicious.</span>
+        </h2>
+        <p class="section-description">
+          Great taste begins with great ingredients. We prepare our treats with care, using quality ingredients and a
+          passion for baking that you can taste in every bite.
+        </p>
+      </div>
+
+      <!-- Bottom Separate 2-Column Grid (Left Text, Right Image - No Merge) -->
+      <div class="fresh-split-grid">
+
+        <!-- Left Column: Craft & Ingredients Details -->
+        <div class="fresh-details-card">
+          <span class="fresh-badge">Daily Small-Batch Craft</span>
+          <h3 class="fresh-sub-heading">
+            Baked Warm Every Morning, Never Rushed.
+          </h3>
+          <p class="fresh-sub-text">
+            Every cake, tart, and loaf starts with cultured butter, stone-ground flour, real vanilla pods, and fine
+            couverture chocolate—mixed and baked in small batches so nothing sits on a shelf.
+          </p>
+
+          <ul class="fresh-highlights">
+            <li>
+              <span class="highlight-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Pure, Honest Ingredients</strong>
+                <span>No artificial preservatives or shortcuts—only real butter, eggs, and seasonal fruit.</span>
+              </div>
+            </li>
+            <li>
+              <span class="highlight-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Precision Oven Timing</strong>
+                <span>Balanced moisture, tender crumb, and golden crusts pulled straight from the oven.</span>
+              </div>
+            </li>
+            <li>
+              <span class="highlight-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Hand-Finished Detail</strong>
+                <span>Silky frostings, delicate glazes, and neat piping completed right before pickup or
+                  delivery.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Distinct Framed Cake Photograph -->
+        <div class="fresh-image-frame">
+          <img src="assets\cakes\cake-8.jpeg" alt="Freshly baked artisan cake cooling on a rack with rich frosting"
+            loading="lazy" />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 05: Special / Customized Cakes -->
+  <section class="special-cakes-section" id="special-cakes">
+    <!-- Left-Side Wide Cake Image Merged via Feathered Brush Gradient -->
+    <div class="special-painted-backdrop">
+      <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=1600&auto=format&fit=crop"
+        alt="Tiered artisan celebration cake decorated with floral accents" />
+    </div>
+
+    <!-- Organic Painterly Brushstroke Accent Blending Left Cake & Right Text -->
+    <svg class="special-brush-overlay" viewBox="0 0 200 800" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M108,0 C62,125 158,235 92,355 C38,455 148,565 82,695 C58,748 102,785 88,800 L200,800 L200,0 Z"
+        fill="#FAF6F0" opacity="0.84" />
+      <path
+        d="M82,0 C42,145 132,255 72,385 C22,485 122,595 62,720 C42,762 78,790 68,800 L112,800 C132,715 62,600 114,475 C160,365 78,235 124,108 C140,64 118,22 108,0 Z"
+        fill="#F3E9DC" opacity="0.6" />
+    </svg>
+
+    <!-- Right-Side Special Cakes Content -->
+    <div class="special-container">
+      <div class="special-content">
+        <div class="section-eyebrow-wrap">
+          <span class="section-eyebrow">MADE JUST FOR YOUR MOMENT</span>
+        </div>
+
+        <h2 class="special-heading">
+          Your Celebration Deserves a <span>Special</span> Cake.
+        </h2>
+
+        <p class="special-description">
+          Birthdays, anniversaries, weddings, or just because — make every occasion memorable with our beautifully
+          handcrafted cakes, customized to match your taste and style.
+        </p>
+
+        <!-- Redesigned 2x2 Artisan Cake Categories Grid -->
+        <div class="occasion-grid" role="list" aria-label="Available Special Cake Categories">
+          <div class="occasion-card" role="listitem">
+            <span class="occasion-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path>
+                <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"></path>
+                <path d="M2 21h20"></path>
+                <path d="M7 8v3"></path>
+                <path d="M12 8v3"></path>
+                <path d="M17 8v3"></path>
+                <path d="M7 4h.01"></path>
+                <path d="M12 4h.01"></path>
+                <path d="M17 4h.01"></path>
+              </svg>
+            </span>
+            <div class="occasion-info">
+              <span class="occasion-name">Birthday Cakes</span>
+              <span class="occasion-sub">Playful & vibrant layers</span>
+            </div>
+          </div>
+
+          <div class="occasion-card" role="listitem">
+            <span class="occasion-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                </path>
+              </svg>
+            </span>
+            <div class="occasion-info">
+              <span class="occasion-name">Wedding Cakes</span>
+              <span class="occasion-sub">Elegant tiered florals</span>
+            </div>
+          </div>
+
+          <div class="occasion-card" role="listitem">
+            <span class="occasion-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+            </span>
+            <div class="occasion-info">
+              <span class="occasion-name">Anniversary Cakes</span>
+              <span class="occasion-sub">Romantic keepsake flavors</span>
+            </div>
+          </div>
+
+          <div class="occasion-card" role="listitem">
+            <span class="occasion-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+              </svg>
+            </span>
+            <div class="occasion-info">
+              <span class="occasion-name">Custom Designs</span>
+              <span class="occasion-sub">Tailored to your theme</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 07: Customer Testimonials -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-container">
+
+      <!-- Top Section Header -->
+      <div class="section-header">
+        <div class="section-eyebrow-wrap">
+          <span class="section-eyebrow">SWEET WORDS FROM OUR CUSTOMERS</span>
+        </div>
+        <h2 class="section-heading">
+          Don't Just Take Our <span>Word</span> for It.
+        </h2>
+        <p class="section-description">
+          Every order tells a story, and every smile makes our day. Here's what our customers have to say about their
+          favorite treats.
+        </p>
+      </div>
+
+      <!-- 4 Testimonial Cards Grid -->
+      <div class="testimonials-grid">
+
+        <!-- Review 1: Sarah M. -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="reviewer-avatar" aria-hidden="true">SM</div>
+            <div class="reviewer-meta">
+              <h3 class="reviewer-name">Sarah M.</h3>
+              <span class="review-label">Customer review</span>
+            </div>
+          </div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            "The chocolate cake was absolutely delicious! Beautiful presentation and amazing taste."
+          </blockquote>
+        </article>
+
+        <!-- Review 2: Emily R. -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="reviewer-avatar" aria-hidden="true">ER</div>
+            <div class="reviewer-meta">
+              <h3 class="reviewer-name">Emily R.</h3>
+              <span class="review-label">Customer review</span>
+            </div>
+          </div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            "The brownies were so rich and fudgy. Definitely ordering again!"
+          </blockquote>
+        </article>
+
+        <!-- Review 3: Zainab K. -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="reviewer-avatar" aria-hidden="true">ZK</div>
+            <div class="reviewer-meta">
+              <h3 class="reviewer-name">Zainab K.</h3>
+              <span class="review-label">Customer review</span>
+            </div>
+          </div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            "The croissants arrived warm and flaky in the morning—felt like a cozy patisserie right at home."
+          </blockquote>
+        </article>
+
+        <!-- Review 4: Bilal A. -->
+        <article class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="reviewer-avatar" aria-hidden="true">BA</div>
+            <div class="reviewer-meta">
+              <h3 class="reviewer-name">Bilal A.</h3>
+              <span class="review-label">Customer review</span>
+            </div>
+          </div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            "Ordered a custom anniversary cake and everyone asked where it was from. Soft sponge and balanced
+            sweetness."
+          </blockquote>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-container">
+
+      <!-- Top Footer Columns -->
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="brand-emblem" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3c2.5 3 2.5 6 0 9-2.5-3-2.5-6 0-9z"></path>
+                <path d="M12 21c-2.5-3-2.5-6 0-9 2.5 3 2.5 6 0 9z"></path>
+                <path d="M3 12c3-2.5 6-2.5 9 0-3 2.5-6 2.5-9 0z"></path>
+                <path d="M21 12c-3 2.5-6 2.5-9 0 3-2.5 6-2.5 9 0z"></path>
+              </svg>
+            </span>
+            <div class="brand-text-wrap">
+              <span class="brand-title">Butter Bloom</span>
+              <span class="brand-tagline">Artisan Bakery</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Handcrafted cakes, flaky pastries, and rich fudgy brownies baked fresh every day to brighten your
+            celebrations and everyday moments.
+          </p>
+          <div class="footer-socials" aria-label="Social Media Links">
+            <a href="#instagram" class="social-circle-btn" aria-label="Instagram" title="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#facebook" class="social-circle-btn" aria-label="Facebook" title="Facebook">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="profile.html" class="social-circle-btn" aria-label="Customer Profile" title="My Profile">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Navigation -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#favorites">Customer Favorites</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#special-cakes">Special Cakes</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Sweet Categories -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Treats</h3>
+          <ul class="footer-links">
+            <li><a href="categories.html?category=cakes">Signature Cakes</a></li>
+            <li><a href="categories.html?category=brownies">Fudgy Brownies</a></li>
+            <li><a href="categories.html?category=pastries">Flaky Pastries</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="profile.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Bakery Hours & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Visit & Order</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <strong>Hours</strong>
+              <span>Mon – Sun: 9:00 AM – 10:00 PM</span>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <span>hello@butterbloombakery.com</span>
+            </li>
+            <li>
+              <strong>Custom Orders</strong>
+              <span>24–48 hrs advance notice for cakes</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2026 <span>Butter Bloom</span>. All rights reserved.
+        </p>
+        <p class="footer-note">
+          Baked fresh daily with love &amp; fine ingredients.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="categories.js"> </script>
+  <script type="module" src="customer-favorite.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bakery Categories — Butter Bloom</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="categories.css" />
+</head>
+
+<body>
+
+  <!-- Top Sticky Navbar -->
+  <header class="bk-navbar" id="bkNavbar">
+    <div class="bk-nav-container">
+
+      <a href="index.html" class="bk-brand" aria-label="Butter Bloom Bakery Home">
+        <span class="bk-brand-script">Butter Bloom</span>
+        <span class="bk-brand-sub">Artisan Patisserie</span>
+      </a>
+
+      <nav class="bk-nav-links" aria-label="Primary Navigation">
+        <a href="index.html#home">Home</a>
+        <a href="categories.html?category=cakes">Cakes</a>
+        <a href="categories.html?category=brownies">Brownies</a>
+        <a href="categories.html?category=pastries">Pastries</a>
+        <a href="profile.html">My Profile</a>
+      </nav>
+
+      <div class="bk-nav-actions">
+        <a href="profile.html" class="profile-circle-btn" id="navProfileBtn" aria-label="User Profile"
+          title="My Profile">
+          <img id="navProfileImg" class="profile-nav-avatar" alt="User avatar" hidden />
+          <svg id="navProfileIcon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Hero Banner -->
+  <section class="cat-hero">
+    <div class="cat-container">
+      <span class="cat-eyebrow" id="catEyebrow">SIGNATURE CAKES</span>
+      <h1 class="cat-hero-title" id="catHeroTitle">Handcrafted Celebration Cakes</h1>
+      <p class="cat-hero-desc" id="catHeroDesc">
+        Layered with silky buttercream, rich ganache, and fresh seasonal ingredients for every special occasion.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Workspace: Left Filter Sidebar + Right 3-Column Product Grid -->
+  <main class="cat-main">
+    <div class="cat-container cat-layout">
+
+      <!-- Left Filter Sidebar -->
+      <aside class="cat-sidebar" aria-label="Filter bakery items">
+        <div class="filter-box">
+          <h2 class="filter-heading">Filter Collection</h2>
+
+          <div class="filter-group">
+            <label for="catSearchInput" class="filter-label">Search Treat</label>
+            <input type="search" id="catSearchInput" class="filter-input" placeholder="e.g. Chocolate, Croissant..." />
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Categories</span>
+            <div class="filter-category-list" id="filterCategoryList">
+              <button type="button" class="filter-cat-btn is-active" data-cat="cakes">Cakes</button>
+              <button type="button" class="filter-cat-btn" data-cat="brownies">Brownies</button>
+              <button type="button" class="filter-cat-btn" data-cat="pastries">Pastries</button>
+              <button type="button" class="filter-cat-btn" data-cat="all">All Treats</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="priceFilterSelect" class="filter-label">Price Range</label>
+            <select id="priceFilterSelect" class="filter-select">
+              <option value="all">All Prices</option>
+              <option value="under-500">Under Rs. 500</option>
+              <option value="500-2800">Rs. 500 – Rs. 2,800</option>
+              <option value="above-2800">Above Rs. 2,800</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn-filter-reset" id="resetFiltersBtn">Reset Filters</button>
+        </div>
+      </aside>
+
+      <!-- Right Products Area -->
+      <div class="cat-content">
+        <div class="cat-results-bar">
+          <p class="cat-results-count" id="catResultsCount">Showing treats</p>
+        </div>
+
+        <div class="products-grid-3" id="productsGrid"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Order Confirmation Modal (When Logged In) -->
+  <div class="bk-order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle" hidden>
+    <div class="bk-order-backdrop" id="orderModalBackdrop"></div>
+    <div class="bk-order-card-modal">
+      <div class="bk-order-modal-head">
+        <div>
+          <span class="cat-eyebrow">PLACE YOUR ORDER</span>
+          <h2 id="orderModalTitle">Confirm Treat Order</h2>
+        </div>
+        <button type="button" class="bk-order-close" id="closeOrderModalBtn"
+          aria-label="Close order modal">&times;</button>
+      </div>
+
+      <form id="placeOrderForm" class="bk-order-form">
+        <div class="order-summary-preview">
+          <img id="orderItemImg" src="" alt="Selected item" class="order-preview-img" />
+          <div>
+            <h3 id="orderItemName" class="order-preview-name"></h3>
+            <p id="orderItemUnitPrice" class="order-preview-price"></p>
+          </div>
+        </div>
+
+        <div class="order-field">
+          <label for="orderQty">Quantity</label>
+          <input type="number" id="orderQty" name="quantity" min="1" max="50" value="1" required />
+        </div>
+
+        <div class="order-field">
+          <label for="orderNote">Special Note / Delivery Instruction (Optional)</label>
+          <input type="text" id="orderNote" name="note"
+            placeholder="e.g. Add happy birthday message or deliver by evening" />
+        </div>
+
+        <div class="order-total-line">
+          <span>Order Total:</span>
+          <strong id="orderCalculatedTotal">Rs. 0</strong>
+        </div>
+
+        <button type="submit" class="btn-order-confirm">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Prompt Modal (When Logged Out) -->
+  <div class="bk-order-modal" id="loginPromptModal" role="dialog" aria-modal="true" aria-labelledby="loginPromptTitle"
+    hidden>
+    <div class="bk-order-backdrop" id="loginPromptBackdrop"></div>
+    <div class="bk-order-card-modal bk-prompt-card">
+      <button type="button" class="bk-order-close" id="closeLoginPromptBtn" aria-label="Close prompt">&times;</button>
+      <span class="cat-eyebrow">LOGIN REQUIRED</span>
+      <h2 id="loginPromptTitle">Please Log In to Place an Order</h2>
+      <p class="bk-prompt-text">
+        You are currently logged out. Sign in with your name, email, phone number, and photo on your profile page so
+        your order is saved and tracked in your dashboard.
+      </p>
+      <div class="bk-prompt-actions">
+        <a href="profile.html" id="goToProfileLoginBtn" class="btn-order-confirm">Go to Login</a>
+        <button type="button" class="btn-prompt-cancel" id="cancelLoginPromptBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="bk-toast" id="bkToast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="categories.js"></script>
+</body>
+
+</html>
