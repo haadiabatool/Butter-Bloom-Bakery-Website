@@ -20,5 +20,7 @@ Showcase customized cakes for different occasions.
 
 Build a visually appealing and responsive website.
 
+## ScreenShots
+
 ![Bakery-website](bakery-image-1.jpeg)
 ![Bakery-website](bakery-image-2.jpeg)
